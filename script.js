@@ -194,20 +194,93 @@ function showSlides(n) {
 }
 
 //поиск из списка
-function myFunction(){
-    var input,filter,ul,li,a,i;
-    input=document.getElementById('myInput');
-    filter=input.value.toUpperCase();
-    ul=document.getElementById("myUl");
-    li=ul.getElementsByTagName('li');
+function myFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById('myInput');
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUl");
+    li = ul.getElementsByTagName('li');
 
-    for (i=0;i<li.length;i++){
-        a=li[i].getElementsByTagName("a")[0];
-        if(a.innerHTML.toUpperCase().indexOf(filter)>-1){
-            li[i].style.display="";
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
         }
-        else{
-            li[i].style.display="none";
+        else {
+            li[i].style.display = "none";
         }
     }
+}
+
+//калькулятор
+function plus() {
+    var num1, num2, result;
+
+    num1 = document.getElementById('n1').value;
+    num1 = parseInt(num1);
+
+    num2 = document.getElementById('n2').value;
+    num2 = parseInt(num2);
+
+    result = num1 + num2;
+
+    document.getElementById('out').innerHTML = result;
+}
+
+function minus() {
+    var num1, num2, result;
+
+    num1 = document.getElementById('n1').value;
+    num1 = parseInt(num1);
+
+    num2 = document.getElementById('n2').value;
+    num2 = parseInt(num2);
+
+    result = num1 - num2;
+
+    document.getElementById('out').innerHTML = result;
+}
+
+function multiply() {
+    var num1, num2, result;
+
+    num1 = document.getElementById('n1').value;
+    num1 = parseInt(num1);
+
+    num2 = document.getElementById('n2').value;
+    num2 = parseInt(num2);
+
+    result = num1 * num2;
+
+    document.getElementById('out').innerHTML = result;
+}
+
+function del() {
+    var num1, num2, result;
+    num1 = document.getElementById('n1').value;
+    num1 = parseInt(num1);
+
+    num2 = document.getElementById('n2').value;
+    num2 = parseInt(num2);
+
+    result = num1 / num2;
+
+    document.getElementById('out').innerHTML = result;
+}
+
+//модальная картинка
+var modal = document.getElementById('myModal');
+var img = document.getElementById('myImg');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+
+img.onclick = function () {
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+var span = document.getElementByClassName("close")[0];
+span.onclick = function () {
+    modal.style.display = "none";
 }
