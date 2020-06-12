@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="checkbox" id="one" onchange="fun1()" />
+
+    <input type="radio" name="r1" value="5" /> 0
+    <input type="radio" name="r1" value="53" /> 1
+    <input type="radio" name="r1" value="535" /> 2
+    <button onclick="fun2()">проверить выбранный элемент</button>
+    <p></p>
+    <select name="" id="mySelect" onchange="fun3()">
+      <option value="">apple</option>
+      <option value="">orange</option>
+      <option value="">pineapple</option>
+      <option value="">banana</option>
+    </select>
+    <p></p>
+    <input type="range" min="0" max="100" step="2" oninput="fun4()" id="r2" />
+    <input type="text" id="i1" />
+
+    <div id="test"></div>
+    <input type="range" min="0" max="100" step="2" oninput="fun5()" id="r3" />
+
+    <div class="block1">
+      <p>
+        Верхний левый угол:
+        <input
+          type="range"
+          id="rtl"
+          min="0"
+          max="100"
+          value="0"
+          oninput="fun6()"
+        />
+        <input type="text" id="ttl" value="0" />
+      </p>
+      <p>
+        Верхний правый угол:
+        <input
+          type="range"
+          id="rtr"
+          min="0"
+          max="100"
+          value="0"
+          oninput="fun6()"
+        />
+        <input type="text" id="ttr" value="0" />
+      </p>
+      <p>
+        Нижний правый угол:
+        <input
+          type="range"
+          id="rbr"
+          min="0"
+          max="100"
+          value="0"
+          oninput="fun6()"
+        />
+        <input type="text" id="tbr" value="0" />
+      </p>
+      <p>
+        Нижний левый угол:
+        <input
+          type="range"
+          id="rbl"
+          min="0"
+          max="100"
+          value="0"
+          oninput="fun6()"
+        />
+        <input type="text" id="tbl" value="0" />
+      </p>
+    </div>
+    <div id="block"></div>
+
+    <div id="nav">
+      <div class="menu-item">
+        Меню 1
+        <div class="submenu">
+          Подменю
+        </div>
+      </div>
+      <div class="menu-item">
+        Меню 2
+        <div class="submenu">
+          Подменю
+        </div>
+      </div>
+      <div class="menu-item">
+        Меню 3
+        <div class="submenu">
+          Подменю
+        </div>
+      </div>
+    </div>
+    <div id="tabs">
+      <div class="tab whiteborder">Tab 1</div>
+      <div class="tab">Tab 2</div>
+      <div class="tab">Tab 3</div>
+      <div class="tabContent">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, facere.
+      </div>
+      <div class="tabContent">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel non facere
+        eligendi.
+      </div>
+      <div class="tabContent">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam, quos iste
+        odio sequi, error hic, doloribus est eos asperiores quaerat quis?
+        Reiciendis, eos ipsam.
+      </div>
+    </div>
+<button id="myBtn">Open modal</button>
+<div class="modal" id="myModal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Модальное окно!</p>
+    </div>
+</div>
+<button onclick="myMove()">Animation</button>
+<div id="myContainer">
+    <div id="myAnimation"></div>
+</div>
+<div class="slideshow-container">
+  <div class="mySlides fade">
+    <div class="numbertext">1/3</div>
+    <img src="/img1.jpg" style="width: 100%" alt="">
+    <div class="text">Text</div>
+  </div>
+  <div class="mySlides fade">
+    <div class="numbertext">2/3</div>
+    <img src="/img2.jpg" style="width: 100%" alt="">
+    <div class="text">Text</div>
+  </div>
+  <div class="mySlides fade">
+    <div class="numbertext">3/3</div>
+    <img src="/img3.jpg" style="width: 100%" alt="">
+    <div class="text">Text</div>
+  </div>
+  <a class="prev" onclick="plusSlides(-1)">&#10094</a>
+  <a class="next" onclick="plusSlides(1)">&#10095</a>
+</div>
+<br>
+<div style="text-align: center";>
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+<input type="text" onkeyup="myFunction()" id="myInput" placeholder="Search for names">
+<ul id="myUl">
+  <li><a href="" class="header">A</a></li>
+  <li><a href="">Anton</a></li>
+  <li><a href="">Andrey</a></li>
+  <li><a href="" class="header">B</a></li>
+  <li><a href="">Bogdan</a></li>
+  <li><a href="">Bill</a></li>
+  <li><a href="">Boris</a></li>
+  <li><a href="" class="header">C</a></li>
+  <li><a href="">Calvin</a></li>
+  <li><a href="">Christina</a></li>
+</ul>
+    <script src="/script.js"></script>
+  </body>
+</html>
